@@ -1,13 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import PropsComponent from './components/functionalcomponents/PropsComponent';
-import StateComponent from './components/classcomponents/StateComponent';
+//import PropsComponent from './components/functionalcomponents/PropsComponent';
+//import StateComponent from './components/classcomponents/StateComponent';
+import NavBar from './components/functionalcomponents/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './components/functionalcomponents/About';
+import Login from './components/functionalcomponents/Login';
+import Experience from './components/functionalcomponents/Experience';
+
 function App() {
   return (
     <div className="App">
-      <PropsComponent name="Hello sneka" course="MERN course"></PropsComponent>
+      <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path="/Experience" element={<Experience/>}></Route>
+        <Route path="/About" element={<About/>}></Route>
+        <Route path="/Login" element={<Login/>}></Route>
+      </Routes>
+      </BrowserRouter>
+      {/* <PropsComponent name="Hello sneka" course="MERN course"></PropsComponent> */}
       <header className="App-header">
-        <StateComponent></StateComponent>
+        {/* <StateComponent></StateComponent> */}
         
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,6 +36,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <footer>
+        
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>Contact us: email@example.com</p>
+    </footer>
     </div>
   );
 }
