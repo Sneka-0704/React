@@ -2,8 +2,8 @@ ol{
     display:flex;
     justify-content: space-evenly;
     list-style-type: none;
-    color: aqua;
-    background-color: black;
+    color: rgb(133, 83, 190);
+    background-color: rgb(5, 3, 12);
     margin: 0%;
 
 }

@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './components/functionalcomponents/About';
 import Login from './components/functionalcomponents/Login';
 import Experience from './components/functionalcomponents/Experience';
+ import Footer from './components/functionalcomponents/Footer';
+ import Reference from './components/functionalcomponents/Reference';
+ import Memo from './components/functionalcomponents/Memo';
+ import Callback from './components/functionalcomponents/Callback';
 
 function App() {
   return (
@@ -17,13 +21,16 @@ function App() {
         <Route path="/Experience" element={<Experience/>}></Route>
         <Route path="/About" element={<About/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
+        <Route path="/useref" element={<Reference/>}></Route>
+        <Route path="/Memo" element={<Memo/>}></Route>
+        <Route path="/Callback" element={<Callback/>}></Route>
       </Routes>
       </BrowserRouter>
       {/* <PropsComponent name="Hello sneka" course="MERN course"></PropsComponent> */}
       <header className="App-header">
         {/* <StateComponent></StateComponent> */}
         
-        <img src={logo} className="App-logo" alt="logo" />
+         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -34,16 +41,16 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> 
       </header>
-      <footer>
-        
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-        <p>Contact us: email@example.com</p>
-    </footer>
+      
+      <Footer/> 
+      
+       
+  
     </div>
+    
   );
 }
 
 export default App;
-
